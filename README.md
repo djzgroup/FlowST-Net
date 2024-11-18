@@ -74,22 +74,6 @@ By default, one ```checkpoints``` directory will be created automatically. The t
   python -m torch.distributed.launch --nproc_per_node=4 ./FlowST-Net/train_ddp.py --nb_iter 1 --dataset HPLFlowNet --nb_points 8192 --batch_size 4 --nb_epochs 100
   ```
 
-## Testing
-
-One model trained on FT3D using 8192 points is provided in ```checkpoints/model-100.tar```.
-
-- To evalaute one pretrained model on test set of FT3D:
-  
-  ```
-  python val_test.py --dataset HPLFlowNet_FT3D --nb_points 8192 --path2ckpt checkpoints/model-100.tar
-  ```
-
-- To evalaute one pretrained model on KITTI dataset:
-  
-  ```
-  python val_test.py --dataset HPLFlowNet_kitti  --nb_points 8192 --path2ckpt checkpoints/model-100.tar
-  ```
-
 ## Acknowledgments
 
 - [FLOT](https://github.com/valeoai/FLOT)
